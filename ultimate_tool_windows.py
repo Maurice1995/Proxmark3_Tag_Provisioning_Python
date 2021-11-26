@@ -6,7 +6,7 @@
 #************* Maurice Pannard (maurice.paannard@riddleandcode.com) ***#
 #**********************************************************************#
 
-
+#testestest hilfe
 # **************** This script reads the UID of a TAG with Proxmark3, 
 # **************** builds a URL from this UID and writes it to the TAG, 
 # **************** aditionally a text file with all written TAGS gets generated.
