@@ -10,9 +10,9 @@ This script:
   * generates a text file with all written Tag URLs + their corresponding UIDs 
  
 Preliminary steps:
-               1. install proxmark3 for windows following this guide: [Rfid ResearchGroup Repo](https://github.com/RfidResearchGroup/proxmark3/blob/master/doc/md/Installation_Instructions/Windows-Installation-Instructions.md)
-               2. copy this ultimate_tool_windows.py script into the folder : /Proxspace
-               3. go threw the --- SETTING SECTION --- (in the python file) and specify: paths, url, TAG_specific vars, pm3 commands, http replacement and element positions
-               4. connect the Proxmark3
-               5. run ultimate_tool_windows.py script and follow terminal output
-               6. after provisioning TAGS, look into /Proxspace/written_TAGS.txt (gets generated automatically)
+               1. install proxmark3 for windows following this guide: [Rfid ResearchGroup Repo](https://github.com/RfidResearchGroup/proxmark3/blob/master/doc/md/Installation_Instructions/Windows-Installation-Instructions.md) <br />
+               2. copy this ultimate_tool_windows.py script into the folder : /Proxspace <br />
+               3. go threw the --- SETTING SECTION --- (in the python file) and specify: paths, url, TAG_specific vars, pm3 commands, http replacement and element positions <br />
+               4. connect the Proxmark3 <br />
+               5. run ultimate_tool_windows.py script and follow terminal output <br />
+               6. after provisioning TAGS, look into /Proxspace/written_TAGS.txt (gets generated automatically) <br />
