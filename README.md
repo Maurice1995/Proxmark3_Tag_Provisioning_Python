@@ -13,11 +13,11 @@ Preliminary steps: <br />
                1. install proxmark3 for windows following this guide: [Rfid ResearchGroup Repo](https://github.com/RfidResearchGroup/proxmark3/blob/master/doc/md/Installation_Instructions/Windows-Installation-Instructions.md) <br />
                2. copy this ultimate_tool_windows.py script into the folder : /Proxspace <br />
                3. go threw the --- SETTING SECTION --- (in the python file) and specify the following:
-                 * paths
-                 * url
-                 * TAG_specific vars
-                 * pm3 commands
-                 * http replacement
+                 * paths <br />
+                 * url <br />
+                 * TAG_specific vars <br />
+                 * pm3 commands <br />
+                 * http replacement <br />
                  * element positions <br />
                4. connect the Proxmark3 <br />
                5. run ultimate_tool_windows.py script and follow terminal output <br />
