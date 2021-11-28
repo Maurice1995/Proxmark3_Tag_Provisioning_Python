@@ -33,7 +33,7 @@ bad_sound=mixer.Sound(r"beep_sounds/bad_beep.wav")
 programpath = 'runme64.bat'
 
 # insert URL (to be written) # no http://
-given_url="kws-trackandtrace.r3c.network/" 
+given_url="google.com/" 
 
 # TAG_specific vars 
 totalURLchars = 44 # URL +UID
