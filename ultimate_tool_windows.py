@@ -36,7 +36,7 @@ com = 3
 programpath = 'runme64.bat'
 
 # insert URL (to be written) # no http://
-given_url="kws-trackandtrace.r3c.network/" 
+given_url='kws-trackandtrace.r3c.network/' 
 
 # TAG_specific vars 
 given_url_len = len(given_url)
@@ -111,7 +111,7 @@ def check_FILE(uid):
 # 2. build URL from UID
 # 3. write built URL to TAG
 
-
+check_create()
 while 1:
 #--------------------------------- 1. read UID form TAG ---------------------------------#
 
@@ -145,7 +145,7 @@ while 1:
     else: 
         #print(stdout) ###################### DEBUG: uncomment to print whole pm3 output, see error message and include exception above within another elif
         uid="".join(parts[parts.index("UID:")+1:parts.index("UID:")+1+uid_hex_len])
-        print("TAG-UID: "+uid)
+        print("TAG-UID: "+ uid)
 
 
 
@@ -202,13 +202,17 @@ while 1:
     if len(ascii_input) == totalURLchars:
         stdout, stderr = res_2.communicate(input=wincom+cmd0+"\n"+cmd1+"\n"+finala+"\n"+finalb+"\n"+finalc+"\n"+finald+"\n"+finale+"\n"+finalf+"\n"+finalg+"\n"+finalh+"\n"+finali+"\n"+finalj+"\n"+finalk+"\n")
         
-        check_create()
-
-        if check_FILE(uid):
-            # if TAG is new
+        #check_create()
+        
+        if check_FILE(uid) and "Can't select card" in stdout:
+            # if TAG is new and Card can't be selected
+            bad_sound.play()
+            print("URL could not be written: " + ascii_input)
+        elif check_FILE(uid) and not "Can't select card" in stdout:
+            # if TAG is new and successfully written
             good_sound.play()
             write_to_FILE(uid, ascii_input)
-            print("URL successfully written: " + ascii_input )
+            print("URL successfully written: " + ascii_input)
         elif not check_FILE(uid):
             # if TAG is already known
             bad_sound.play()
@@ -218,6 +222,8 @@ while 1:
     else:
         # if URL len is invalid
         print('invalid URL length')
+    
+    #print(stdout)              #### DEBUG
 
 
 #-------------------------------------- END OF SCRIPT --------------------------------------#
