@@ -6,11 +6,11 @@ In case of questions or emergency, contact the authors Lucas Schmirl (lucas_schm
 
 ![Proxmark RDV4](https://user-images.githubusercontent.com/45564963/143783928-d8c88f55-1992-4423-ab88-0adab231d4ea.png)
 
-## What the script does:
+## Functionalities:
 
 - reads the UID of a TAG with Proxmark3
-- builds a URL from this UID
-- writes the URL to a TAG
+- appends UID to given URL
+- writes the UID specific URL to a TAG
 - generates a text file with all written Tag URLs + their corresponding UIDs<br /><br />
 
 ## Preliminary steps: <br />
