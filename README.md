@@ -15,15 +15,21 @@ In case of questions or emergency, contact the authors Lucas Schmirl (lucas_schm
 
 ## Preliminary steps: <br />
 
-1. install proxmark3 for windows following this guide: [Rfid ResearchGroup Repo](https://github.com/RfidResearchGroup/proxmark3/blob/master/doc/md/Installation_Instructions/Windows-Installation-Instructions.md) <br />
-2. copy this ultimate_tool_windows.py script into the folder : /Proxspace <br />
-3. go threw the --- SETTING SECTION --- (in the python file) and specify the following: <br />
+1. install proxmark3 for windows following this guide: (here's a more detailed guide: [Rfid ResearchGroup Repo](https://github.com/RfidResearchGroup/proxmark3/blob/master/doc/md/Installation_Instructions/Windows-Installation-Instructions.md)) <br />
+   - download [ProxSpace.7z](https://github.com/Gator96100/ProxSpace/releases/download/v3.10/ProxSpace.7z) lastest release from [Gater96100 Repo](https://github.com/Gator96100/ProxSpace/releases)
+   - extract the file to a location without spaces in the path
+   - double click the runme64.bat (this might take up to 10 minutes)
+   - after installation you'll get a Bash prompt and your home directory should become the ProxSpace >pm3< sub-directory.
+   - type "git clone https://github.com/RfidResearchGroup/proxmark3.git"
+
+3. copy this ultimate_tool_windows.py script into the folder : /Proxspace <br />
+4. go through the --- SETTING SECTION --- (in the python file) and specify the following: <br />
    - paths <br />
    - url <br />
    - TAG_specific vars <br />
    - pm3 commands <br />
    - http replacement <br />
    - element positions <br />
-4. connect the Proxmark3 <br />
-5. run ultimate_tool_windows.py script and follow terminal output <br />
-6. after provisioning TAGS, look into /Proxspace/written_TAGS.txt (gets generated automatically) <br />
+5. connect the Proxmark3 <br />
+6. run ultimate_tool_windows.py script and follow terminal output <br />
+7. after provisioning TAGS, look into /Proxspace/written_TAGS.txt (gets generated automatically) <br />
