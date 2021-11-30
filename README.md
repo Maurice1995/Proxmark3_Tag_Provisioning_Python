@@ -38,4 +38,10 @@ In case of questions or emergency, contact the authors Lucas Schmirl (lucas_schm
    - element positions <br /><br />
 5. connect the Proxmark3 <br /><br />
 6. run ultimate_tool_windows.py script and follow terminal output <br /><br />
-7. after provisioning TAGS, look into /Proxspace/written_TAGS.txt (gets generated automatically) <br />
+7. after provisioning TAGS, look into /Proxspace/written_TAGS.txt (gets generated automatically) <br /><br />
+
+## Important Note
+If running this from cmd.exe paths need to be absolute.
+VSCode on the other hand is also fine with relative paths.
+We suggest running it with VS Code since this will work right out the bat. 
+
