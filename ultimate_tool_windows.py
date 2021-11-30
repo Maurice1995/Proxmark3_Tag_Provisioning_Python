@@ -36,7 +36,7 @@ com = 3
 programpath = 'runme64.bat'
 
 # insert URL (to be written) # no http://
-given_url='kws-trackandtrace.r3c.network/' 
+given_url = "google.com/" 
 
 # TAG_specific vars 
 given_url_len = len(given_url)
