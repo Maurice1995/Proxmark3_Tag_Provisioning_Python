@@ -20,13 +20,13 @@ In case of questions or emergency, contact the authors Lucas Schmirl (lucas_schm
    - extract the file to a location without spaces in the path
    - double click the runme64.bat (this might take up to 10 minutes)
    - after installation you'll get a Bash prompt and your home directory should become the ProxSpace >pm3< sub-directory.
-   - type "git clone https://github.com/RfidResearchGroup/proxmark3.git"
-   - cd proxmark3
-   - make clean && make -j
-   - make install <br /><br />
+   - type ```git clone https://github.com/RfidResearchGroup/proxmark3.git```
+   - ```cd proxmark3```
+   - ```make clean && make -j```
+   - ```make install``` <br /><br />
 
 
-2. git clone https://github.com/Maurice1995/Proxmark3_Tag_Provisioning_Python.git into the Proxspace folder <br /><br />
+2. ```git clone https://github.com/Maurice1995/Proxmark3_Tag_Provisioning_Python.git``` into the Proxspace folder <br /><br />
 3. open the Proxspace folder with VS Code <br /><br />
 4. go through the --- SETTING SECTION --- (in the python file) and specify the following: <br />
    - paths <br />
