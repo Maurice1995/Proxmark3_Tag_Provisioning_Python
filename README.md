@@ -11,7 +11,7 @@ In case of questions or emergency, contact the authors Lucas Schmirl (lucas_schm
 - reads the UID of a TAG with Proxmark3
 - builds a URL from this UID
 - writes the URL to a TAG
-- generates a text file with all written Tag URLs + their corresponding UIDs
+- generates a text file with all written Tag URLs + their corresponding UIDs<br /><br />
 
 ## Preliminary steps: <br />
 
@@ -23,10 +23,11 @@ In case of questions or emergency, contact the authors Lucas Schmirl (lucas_schm
    - type "git clone https://github.com/RfidResearchGroup/proxmark3.git"
    - cd proxmark3
    - make clean && make -j
-   - make install
-   - git clone https://github.com/Maurice1995/Proxmark3_Tag_Provisioning_Python.git
+   - make install <br /><br />
 
-3. copy this ultimate_tool_windows.py script into the folder : /Proxspace <br />
+
+2. git clone https://github.com/Maurice1995/Proxmark3_Tag_Provisioning_Python.git into the Proxspace folder <br /><br />
+3. open the Proxspace folder with VS Code <br /><br />
 4. go through the --- SETTING SECTION --- (in the python file) and specify the following: <br />
    - paths <br />
    - comport <br />
@@ -34,7 +35,7 @@ In case of questions or emergency, contact the authors Lucas Schmirl (lucas_schm
    - TAG_specific vars <br />
    - pm3 commands <br />
    - http replacement <br />
-   - element positions <br />
-5. connect the Proxmark3 <br />
-6. run ultimate_tool_windows.py script and follow terminal output <br />
+   - element positions <br /><br />
+5. connect the Proxmark3 <br /><br />
+6. run ultimate_tool_windows.py script and follow terminal output <br /><br />
 7. after provisioning TAGS, look into /Proxspace/written_TAGS.txt (gets generated automatically) <br />

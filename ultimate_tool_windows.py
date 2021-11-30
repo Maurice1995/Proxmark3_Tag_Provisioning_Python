@@ -25,9 +25,9 @@ mixer.init() # beep init
 
 #--------------------------------- SETTING SECTION---------------------------------------#
 
-# insert absolute path to any .wav or put it in Proxspace folder and use relative path 
+# insert absolute path to any .wav or put it in Proxspace folder and use relative path (relative only works with VS Code)
 good_sound=mixer.Sound(r"Proxmark3_Tag_Provisioning_Python/beep_sounds/good_beep_2.wav")
-bad_sound=mixer.Sound(r"Proxmark3_Tag_Provisioning_Python/beep_sounds/bad_beep.wav")
+bad_sound=mixer.Sound(r"Proxmark3_Tag_Provisioning_Python/beep_sounds/bad_beep.wav")	
 
 #check COM Port of Proxmark in Device Manager
 com = 3
