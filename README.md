@@ -21,10 +21,14 @@ In case of questions or emergency, contact the authors Lucas Schmirl (lucas_schm
    - double click the runme64.bat (this might take up to 10 minutes)
    - after installation you'll get a Bash prompt and your home directory should become the ProxSpace >pm3< sub-directory.
    - type "git clone https://github.com/RfidResearchGroup/proxmark3.git"
+   - cd proxmark3
+   - make clean && make -j
+   - make install
 
 3. copy this ultimate_tool_windows.py script into the folder : /Proxspace <br />
 4. go through the --- SETTING SECTION --- (in the python file) and specify the following: <br />
    - paths <br />
+   - client/proxmark3 COM3-------------------------------------------------------------------------------------------
    - url <br />
    - TAG_specific vars <br />
    - pm3 commands <br />
