@@ -43,5 +43,5 @@ In case of questions or emergency, contact the authors Lucas Schmirl (lucas_schm
 ## Important Note
 If running this from cmd.exe paths need to be absolute.
 VSCode on the other hand is also fine with relative paths.
-We suggest running it with VS Code since this will work right out the bat. 
+We suggest running it with VS Code since this will work right off the bat. 
 
