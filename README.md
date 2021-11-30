@@ -24,11 +24,12 @@ In case of questions or emergency, contact the authors Lucas Schmirl (lucas_schm
    - cd proxmark3
    - make clean && make -j
    - make install
+   - git clone https://github.com/Maurice1995/Proxmark3_Tag_Provisioning_Python.git
 
 3. copy this ultimate_tool_windows.py script into the folder : /Proxspace <br />
 4. go through the --- SETTING SECTION --- (in the python file) and specify the following: <br />
    - paths <br />
-   - client/proxmark3 COM3-------------------------------------------------------------------------------------------
+   - comport <br />
    - url <br />
    - TAG_specific vars <br />
    - pm3 commands <br />

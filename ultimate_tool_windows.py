@@ -26,24 +26,30 @@ mixer.init() # beep init
 #--------------------------------- SETTING SECTION---------------------------------------#
 
 # insert absolute path to any .wav or put it in Proxspace folder and use relative path 
-good_sound=mixer.Sound(r"beep_sounds/good_beep_2.wav")
-bad_sound=mixer.Sound(r"beep_sounds/bad_beep.wav")
+good_sound=mixer.Sound(r"Proxmark3_Tag_Provisioning_Python/beep_sounds/good_beep_2.wav")
+bad_sound=mixer.Sound(r"Proxmark3_Tag_Provisioning_Python/beep_sounds/bad_beep.wav")
+
+#check COM Port of Proxmark in Device Manager
+com = 3
 
 # insert path to 'runme64.bat'
 programpath = 'runme64.bat'
 
 # insert URL (to be written) # no http://
-given_url="google.com/" 
+given_url="kws-trackandtrace.r3c.network/" 
 
 # TAG_specific vars 
-totalURLchars = 44 # URL +UID
-uid_len = 7
+given_url_len = len(given_url)
+uid_char_len = 14
+uid_hex_len = 7
+totalURLchars = given_url_len + uid_char_len # URL +UID
+
 double_blockWidth = 16
 
 # pm3 commands according to reader and needed actions -> see pm3 documentation
 test="hf mfu dump"
 pre_command = 'hf 14a raw -sc A2'
-wincom = "cd proxmark3/"+"\n"+"pm3\n"
+wincom = "cd proxmark3/"+"\n"+"client/proxmark3 COM"+str(com)+"\n"
 
 # http:// replacement
 cmd0= pre_command + "05450331D1"
@@ -79,6 +85,11 @@ def stringcreator(command, uid_block_START, uid_block_END):
     return final
 
 # ----- FILE functions -----
+
+# create empty text file
+def check_create():
+    with open('written_TAGS.txt', 'a+') as TAG_FILE:
+        TAG_FILE.write('')
 
 # write UID and finished URL to text file
 def write_to_FILE(uid, url):
@@ -133,7 +144,7 @@ while 1:
     # if no errors were detected
     else: 
         #print(stdout) ###################### DEBUG: uncomment to print whole pm3 output, see error message and include exception above within another elif
-        uid="".join(parts[parts.index("UID:")+1:parts.index("UID:")+1+uid_len])
+        uid="".join(parts[parts.index("UID:")+1:parts.index("UID:")+1+uid_hex_len])
         print("TAG-UID: "+uid)
 
 
@@ -145,6 +156,7 @@ while 1:
     
     # fusion of UID and URL
     ascii_input = given_url + uid 
+    print(ascii_input)
     
     # URL+UID(ascii_to_HEX) conversion
     hex_output = ascii_to_hex(ascii_input)
@@ -190,6 +202,8 @@ while 1:
     if len(ascii_input) == totalURLchars:
         stdout, stderr = res_2.communicate(input=wincom+cmd0+"\n"+cmd1+"\n"+finala+"\n"+finalb+"\n"+finalc+"\n"+finald+"\n"+finale+"\n"+finalf+"\n"+finalg+"\n"+finalh+"\n"+finali+"\n"+finalj+"\n"+finalk+"\n")
         
+        check_create()
+
         if check_FILE(uid):
             # if TAG is new
             good_sound.play()
