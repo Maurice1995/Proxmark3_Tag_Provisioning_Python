@@ -15,7 +15,7 @@ In case of questions or emergency, contact the authors Lucas Schmirl (lucas_schm
 
 ## Preliminary steps: <br />
 
-1. install proxmark3 for windows following this guide: (here's a more detailed guide: [Rfid ResearchGroup Repo](https://github.com/RfidResearchGroup/proxmark3/blob/master/doc/md/Installation_Instructions/Windows-Installation-Instructions.md)) <br />
+1. &nbsp; Install proxmark3 for windows following this guide: (here's a more detailed guide: [Rfid ResearchGroup Repo](https://github.com/RfidResearchGroup/proxmark3/blob/master/doc/md/Installation_Instructions/Windows-Installation-Instructions.md)) <br />
    - download [ProxSpace.7z](https://github.com/Gator96100/ProxSpace/releases/download/v3.10/ProxSpace.7z) lastest release from [Gater96100 Repo](https://github.com/Gator96100/ProxSpace/releases)
    - extract the file to a location without spaces in the path
    - double click the runme64.bat (this might take up to 10 minutes)
@@ -26,9 +26,9 @@ In case of questions or emergency, contact the authors Lucas Schmirl (lucas_schm
    - ```make install``` <br /><br />
 
 
-2. ```git clone https://github.com/Maurice1995/Proxmark3_Tag_Provisioning_Python.git``` into the Proxspace folder <br /><br />
-3. open the Proxspace folder with VS Code <br /><br />
-4. go through the --- SETTING SECTION --- (in the python file) and specify the following: <br />
+2. &nbsp;```git clone https://github.com/Maurice1995/Proxmark3_Tag_Provisioning_Python.git``` **into the Proxspace folder** <br /><br />
+3. &nbsp;Open the Proxspace folder with VS Code <br /><br />
+4. &nbsp;Go through the --- SETTING SECTION --- (in the python file) and specify the following: <br />
    - paths <br />
    - comport <br />
    - url <br />
@@ -36,9 +36,9 @@ In case of questions or emergency, contact the authors Lucas Schmirl (lucas_schm
    - pm3 commands <br />
    - http replacement <br />
    - element positions <br /><br />
-5. connect the Proxmark3 <br /><br />
-6. run ultimate_tool_windows.py script and follow terminal output <br /><br />
-7. after provisioning TAGS, look into /Proxspace/written_TAGS.txt (gets generated automatically) <br /><br />
+5. &nbsp;Connect the Proxmark3 <br /><br />
+6. &nbsp;Run ultimate_tool_windows.py script and follow terminal output <br /><br />
+7. &nbsp;After provisioning TAGS, look into /Proxspace/written_TAGS.txt (gets generated automatically) <br /><br />
 
 ## Important Note
 If running this from cmd.exe paths need to be absolute.
